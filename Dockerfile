@@ -22,8 +22,8 @@ RUN set -x \
 	&& chmod +x /usr/local/bin/gosu \
 	&& gosu nobody true
 
-ARG REDIS_VERSION
-ENV REDIS_VERSION $REDIS_VERSION
+#ARG REDIS_VERSION
+ENV REDIS_VERSION 3.2.0
 RUN echo $REDIS_VERSION
 
 ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-${REDIS_VERSION}.tar.gz
